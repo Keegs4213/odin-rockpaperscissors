@@ -18,7 +18,12 @@ function getComputerChoice() {
 
 //Function plays single round of RPS
 function round(playerSelection,computerSelection){
-
+    let tie = "Tie! You selected " + playerSelection + " and the computer selected " + computerSelection;
+    let paperBeatRock =
+    let scissorsBeatPaperLoss = 
+    let rockBeatScissors =
+    let rocksBeatScissorsLoss =
+    let scissorsBeatPaper =
 
 }
     
