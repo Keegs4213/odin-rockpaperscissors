@@ -1,5 +1,4 @@
 // Function to make the computer randomly choose rock paper or scissors//
-const getRandomValue = Math.random();
 
 function getComputerChoice() {
     let rock = "Rock";
