@@ -13,7 +13,7 @@ function getComputerChoice() {
     } else {
         return scissors;
     }
-}
+} // make console log return correct thing before progressing
 
 //Function plays single round of RPS
 function round(playerSelection,computerSelection){
