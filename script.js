@@ -44,7 +44,8 @@ function playRound(playerSelection,computerSelection) {
     //function to format the input as case insensitive
 
     function capitalise(playerSelection) {
-
+        let = allLowerCase = playerSelection.toLowerCase();
+        let = upperCaseInput = playerSelection.
     }
 }
     // Player Selection 
