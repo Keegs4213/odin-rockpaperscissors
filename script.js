@@ -24,12 +24,31 @@ function playRound(playerSelection,computerSelection) {
     let scissorsBeatPaperLoss = "You lose! You selected "  + playerSelection + " and the computer selected " + computerSelection;
     let paperBeatRockLoss = "You lose! You selected " + playerSelection + "and the computer selected " + computerSelection;
     let rockBeatScissors = "You win! You selected " + playerSelection + " and the computer selected " + computerSelection; 
-    let rocksBeatScissorsLoss = "You lose! You selected " + playerSelection + " and the computer selected " + computerSelection;
+    let rockBeatScissorsLoss = "You lose! You selected " + playerSelection + " and the computer selected " + computerSelection;
     let scissorsBeatPaper = "You win! You selected " + playerSelection + " and the computer selected " + computerSelection;
 
     if (playerSelection === computerSelection) {
         return tie;
     }
+    else if (computerSelection === rock && playerSelection === scissors) {
+        return paperBeatRockLoss;
+    }
+    else if (computerSelection === rock && playerSelection === paper) {
+        return paperBeatRock;
+    }    
+    else if (computerSelection === scissors && playerSelection === paper) {
+        return scissorsBeatPaperLoss;
+    }
+    else if (computerSelection === scissors && playerSelection === scissors) {
+        return rockBeatScissors;
+    }
+    else if (computerSelection === rock && playerSelection === scissors) {
+        return rockBeatScissorsLoss;
+    }
+    else if (computerSelection === paper && playerSelection === scissors) {
+        return scissorsBeatPaper;
+    }
+
 }
     // Player Selection 
  // prompt()
