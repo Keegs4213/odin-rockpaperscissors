@@ -1,21 +1,17 @@
 // Function to make the computer randomly choose rock paper or scissors//
-
-
-
 function getComputerChoice() {
     let rock = "Rock";
     let paper = "Paper";
     let scissors = "Scissors";
-    let getRandomNum = Math.floor(Math.random() * 3);
-    if (getRandomNum = 0) {
+    let getRandomNum = Math.random();
+    if (getRandomNum <= 0.33) {
         return rock;
-    } else if (getRandomValue = 1) {
+    } else if (getRandomNum <= 0.66) {
         return paper;
     } else {
         return scissors;
     }
-
-} // make console log return correct thing before progressing
+}
 
 //Function plays single round of RPS
 function playRound(playerSelection,computerSelection) {
@@ -26,29 +22,30 @@ function playRound(playerSelection,computerSelection) {
     let rockBeatScissors = "You win! You selected " + playerSelection + " and the computer selected " + computerSelection; 
     let rockBeatScissorsLoss = "You lose! You selected " + playerSelection + " and the computer selected " + computerSelection;
     let scissorsBeatPaper = "You win! You selected " + playerSelection + " and the computer selected " + computerSelection;
-
+      
     if (playerSelection === computerSelection) {
-        return tie;
-    }
-    else if (computerSelection === rock && playerSelection === scissors) {
+    return tie;
+    } else if (computerSelection === rock && playerSelection === scissors) {
         return paperBeatRockLoss;
-    }
-    else if (computerSelection === rock && playerSelection === paper) {
+    } else if (computerSelection === rock && playerSelection === paper) {
         return paperBeatRock;
-    }    
-    else if (computerSelection === scissors && playerSelection === paper) {
+    } else if (computerSelection === scissors && playerSelection === paper) {
         return scissorsBeatPaperLoss;
-    }
-    else if (computerSelection === scissors && playerSelection === scissors) {
+    } else if (computerSelection === scissors && playerSelection === scissors) {
         return rockBeatScissors;
-    }
-    else if (computerSelection === rock && playerSelection === scissors) {
+    } else if (computerSelection === rock && playerSelection === scissors) {
         return rockBeatScissorsLoss;
-    }
-    else if (computerSelection === paper && playerSelection === scissors) {
+    } else {
         return scissorsBeatPaper;
     }
+}
 
+
+    //function to format the input as case insensitive
+
+    function capitalise(playerSelection) {
+
+    }
 }
     // Player Selection 
  // prompt()
