@@ -42,12 +42,16 @@ function playRound(playerSelection,computerSelection) {
 
 
     //function to format the input as case insensitive
-
-    function capitalise(playerSelection) {
+    function capitalize(playerSelection) {
         let = allLowerCase = playerSelection.toLowerCase();
-        let = upperCaseInput = playerSelection.
+        let = capitalizeFirstLetter = allLowerCase.charAt(0).toUpperCase() + allLowerCase.slice(1);
+        return capitalizeFirstLetter;
     }
-}
+
+    const playerSelection = "rock";
+    const computerSelection = getComputerChoice();
+    // console.log(playRound(capitalize(playerSelection), computerSelection));
+
     // Player Selection 
  // prompt()
 
@@ -55,4 +59,4 @@ function playRound(playerSelection,computerSelection) {
 // computer selection    getComputer Choice = computerSelection;
 
 
-// game function using round function - use loop to play 5 rounds
+// game function using round function - use loop to play 5 rounds and keep score
