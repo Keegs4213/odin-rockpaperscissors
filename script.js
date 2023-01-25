@@ -12,9 +12,9 @@ function getComputerChoice() {
         return scissors;
     }
 }
-
+        
 //Function plays single round of RPS
-function playRound(playerSelection,computerSelection) {
+function playRound(playerSelection,computerSelection) {       
     let tie = "Tie! You selected " + playerSelection + " and the computer selected " + computerSelection;
     let paperBeatRock = "You win! You selected " + playerSelection + " and the computer selected " + computerSelection;
     let scissorsBeatPaperLoss = "You lose! You selected "  + playerSelection + " and the computer selected " + computerSelection;
@@ -22,7 +22,7 @@ function playRound(playerSelection,computerSelection) {
     let rockBeatScissors = "You win! You selected " + playerSelection + " and the computer selected " + computerSelection; 
     let rockBeatScissorsLoss = "You lose! You selected " + playerSelection + " and the computer selected " + computerSelection;
     let scissorsBeatPaper = "You win! You selected " + playerSelection + " and the computer selected " + computerSelection;
-      
+
     if (playerSelection === computerSelection) {
     return tie;
     } else if (computerSelection === rock && playerSelection === scissors) {
@@ -37,19 +37,17 @@ function playRound(playerSelection,computerSelection) {
         return rockBeatScissorsLoss;
     } else {
         return scissorsBeatPaper;
-    }
+    } 
 }
-
-
     //function to format the input as case insensitive
     function capitalize(playerSelection) {
-        let = allLowerCase = playerSelection.toLowerCase();
-        let = capitalizeFirstLetter = allLowerCase.charAt(0).toUpperCase() + allLowerCase.slice(1);
+        let allLowerCase = playerSelection.toLowerCase();
+        let capitalizeFirstLetter = allLowerCase.charAt(0).toUpperCase() + allLowerCase.slice(1);
         return capitalizeFirstLetter;
     }
+       let playerSelection = "Rock";
+       let computerSelection = getComputerChoice();
 
-    const playerSelection = "rock";
-    const computerSelection = getComputerChoice();
     // console.log(playRound(capitalize(playerSelection), computerSelection));
 
     // Player Selection 
