@@ -1,3 +1,17 @@
+// Scores start at 0
+let playerScore = 0;
+let computerScore = 0;
+
+while (true) {
+    let playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase();
+
+
+if (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
+    console.log("Invalid choice, please select rock, paper or scissors");
+    continue;
+}
+
+}
 // Function to make the computer randomly choose rock paper or scissors//
 function getComputerChoice() {
     let rock = "Rock";
