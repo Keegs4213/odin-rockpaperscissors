@@ -2,15 +2,14 @@
 let playerScore = 0;
 let computerScore = 0;
 
-while (true) {
-    let playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase();
 
+// Play 5 rounds, prompt playerSelection & convert to lowercase so it is case insensitive
+for(let i = 0; i < 5; i++) {
+    let playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase();
 
 if (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
     console.log("Invalid choice, please select rock, paper or scissors");
     continue;
-}
-
 }
 // Function to make the computer randomly choose rock paper or scissors//
 function getComputerChoice() {
