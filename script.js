@@ -1,22 +1,13 @@
-// Function to make the computer randomly choose rock paper or scissors//
+// // Function to make the computer randomly choose rock paper or scissors//
 function getComputerChoice() {
-    let rock = "Rock";
-    let paper = "Paper";
-    let scissors = "Scissors";
-    let computerChoice = Math.random();
-    if (computerChoice <= 0.34) {
-        computerChoice = rock;
-    } else if (computerChoice <= 0.67) {
-        computerChoice = paper;
-    } else {
-        computerChoice = scissors;
-    }
-    console.log("Computer: " + computerChoice);
-}
+    let computerChoice = ['rock', 'paper', 'scissors'];
+    return computerChoice[Math.floor(Math.random() * computerChoice.length)];
+  }
+
 
 //Function plays single round of RPS 
 function playRound(playerSelection, computerSelection) {
-    playerSelection = prompt("Make your choice").toLowerCase();
+    playerSelection = playerSelection.toLowerCase();
 
     if (playerSelection === computerSelection) {
         return "It's a tie!";
@@ -35,13 +26,13 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection === "scissors") {
         if (computerSelection === "paper") {
             return "You win! Scissors beats paper.";
-        }
-        else {
+        } else {
             return "You lose! Rock beats scissors.";
         }
     } else {
         return "Invalid selection. Please choose rock paper or scissors.";
     }
+}
 
     //Play 5 round game - set score to 0 and keep track
     function game() {
@@ -57,14 +48,13 @@ function playRound(playerSelection, computerSelection) {
                 computerScore++;
             }
         }
-            // Score comparison to declare who wins or if the game is tied
-            if (playerScore > computerScore) {
-                return "You won!";
-            } else if (playerScore < computerScore) {
-                return "You lost!";
-            } else {
-                return "It's a tie!";
-            }
+        // Score comparison to declare who wins or if the game is tied
+        if (playerScore > computerScore) {
+            return "You won!";
+        } else if (playerScore < computerScore) {
+            return "You lost!";
+        } else {
+            return "It's a tie!";
         }
-        console.log(game);
     }
+    console.log(game);
